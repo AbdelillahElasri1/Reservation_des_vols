@@ -32,7 +32,7 @@
         <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!-- Mention annotated class packages -->
-        <mapping class="com.elasriabdelillah.reservation_vols.model.Admin" />
+<!--        <mapping class="com.elasriabdelillah.reservation_vols.model.Admin" />-->
 
     </session-factory>
 

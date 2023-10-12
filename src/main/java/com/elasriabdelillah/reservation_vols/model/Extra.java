@@ -1,13 +1,23 @@
-package com.reservation.model;
+package com.elasriabdelillah.reservation_vols.model;
 
+import jakarta.persistence.*;
+import lombok.Data;
+@Entity
+@Data
+@Table(name = "extra")
 public class Extra {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
     private String name;
     private float tarif;
+
     public Extra(){
 
     }
 
-    public Extra(String name, float tarif) {
+    public Extra(String id ,String name, float tarif) {
+        this.id = id;
         this.name = name;
         this.tarif = tarif;
     }
@@ -26,5 +36,13 @@ public class Extra {
 
     public void setTarif(float tarif) {
         this.tarif = tarif;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
     }
 }

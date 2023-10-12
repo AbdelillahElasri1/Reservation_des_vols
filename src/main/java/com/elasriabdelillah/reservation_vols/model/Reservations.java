@@ -1,9 +1,16 @@
-package com.reservation.model;
+package com.elasriabdelillah.reservation_vols.model;
+
+import jakarta.persistence.*;
+import lombok.Data;
 
 import java.sql.Time;
 import java.util.Date;
-
+@Entity
+@Data
+@Table(name = "Reservation")
 public class Reservations {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String city_departure;
     private String city_arrival;

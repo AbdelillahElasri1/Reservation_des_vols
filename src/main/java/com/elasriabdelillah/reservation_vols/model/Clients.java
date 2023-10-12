@@ -1,9 +1,13 @@
-package com.reservation.model;
+package com.elasriabdelillah.reservation_vols.model;
 
+import jakarta.persistence.*;
 import lombok.Data;
-
+@Entity
 @Data
+@Table(name = "Clients")
 public class Clients {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String code;
     private String firstName;
     private String lastName;
