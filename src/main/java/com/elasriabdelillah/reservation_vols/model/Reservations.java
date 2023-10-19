@@ -12,20 +12,32 @@ public class Reservations {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+    @Column(name = "city_departure")
     private String city_departure;
+    @Column(name = "city_arrival")
     private String city_arrival;
+    @Column(name = "date_departure")
     private Date date_departure;
+    @Column(name = "date_arrival")
     private Date date_arrival;
+    @Column(name = "hour_departure")
     private Time hour_departure;
+    @Column(name = "hour_arrival")
     private Time hour_arrival;
+    @Column(name = "number_places")
     private int number_places;
+    @Column(name = "tarif")
     private float tarif;
+    @Column(name = "client_id")
+    private Clients clients;
+    @Column(name = "flight_id")
+    private Flight flight;
     private Extra extra;
     public Reservations(){
 
     }
 
-    public Reservations(String id, String city_departure, String city_arrival, Date date_departure, Date date_arrival, Time hour_departure, Time hour_arrival, int number_places, float tarif, Extra extra) {
+    public Reservations(String id, String city_departure, String city_arrival, Date date_departure, Date date_arrival, Time hour_departure, Time hour_arrival, int number_places, float tarif, Clients clients, Flight flight , Extra extra) {
         this.id = id;
         this.city_departure = city_departure;
         this.city_arrival = city_arrival;
@@ -35,7 +47,25 @@ public class Reservations {
         this.hour_arrival = hour_arrival;
         this.number_places = number_places;
         this.tarif = tarif;
+        this.clients = clients;
+        this.flight = flight;
         this.extra = extra;
+    }
+
+    public Clients getClients() {
+        return clients;
+    }
+
+    public void setClients(Clients clients) {
+        this.clients = clients;
+    }
+
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public void setFlight(Flight flight) {
+        this.flight = flight;
     }
 
     public String getId() {

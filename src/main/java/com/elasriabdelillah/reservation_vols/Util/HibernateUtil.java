@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class hibernateUtil {
+public class HibernateUtil {
     @Getter
     private static final SessionFactory sessionFactory;
     static {
@@ -14,4 +14,5 @@ public class hibernateUtil {
             throw new ExceptionInInitializerError(ex);
         }
     }
+
 }

@@ -5,11 +5,16 @@
          version="5.0">
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
+        <servlet-name>ReservationServlets</servlet-name>
         <servlet-class>com.elasriabdelillah.reservation_vols.HelloServlet</servlet-class>
+        <servlet-class>com.elasriabdelillah.reservation_vols.Servlets.ReservationServlets</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/hello-servlets</url-pattern>
+        <servlet-name>ReservationServlets</servlet-name>
+        <url-pattern>/reservation</url-pattern>
     </servlet-mapping>
+
 </web-app>

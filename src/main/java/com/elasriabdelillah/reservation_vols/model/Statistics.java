@@ -10,7 +10,9 @@ public class Statistics {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+    @Column(name = "reservation_confirme")
     private int reservationConfirme;
+    @Column(name = "reservation_annule")
     private int reservationAnnule;
 
     public Statistics(){

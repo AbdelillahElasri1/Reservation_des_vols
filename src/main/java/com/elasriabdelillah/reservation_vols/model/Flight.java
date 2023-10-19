@@ -12,13 +12,21 @@ public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "description")
     private String description;
+    @Column(name = "city_departure")
     private String city_departure;
+    @Column(name = "city_arrival")
     private String city_arrival;
+    @Column(name = "hour_departure")
     private Time hour_departure;
+    @Column(name = "hour_arrival")
     private Time hour_arrival;
+    @Column(name = "date_departure")
     private Date date_departure;
+    @Column(name = "date_arrival")
     private Date date_arrival;
     private Reservations reservations;
     public Flight(){

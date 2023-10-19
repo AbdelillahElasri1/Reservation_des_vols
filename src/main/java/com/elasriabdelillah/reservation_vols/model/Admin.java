@@ -10,8 +10,11 @@ public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+    @Column(name = "full_name")
     private String fullName;
+    @Column(name = "email")
     private String email;
+    @Column(name = "password")
     private String password;
 
     public Admin(){

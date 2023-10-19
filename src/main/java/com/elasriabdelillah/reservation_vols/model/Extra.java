@@ -9,7 +9,9 @@ public class Extra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "tarif")
     private float tarif;
 
     public Extra(){
